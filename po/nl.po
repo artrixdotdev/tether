@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-22 19:30-0700\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Dutch\n"
@@ -49,7 +49,8 @@ msgstr "Een bestand via tether versturen."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "Met --send-file naar één verbonden apparaat versturen (naam of vingerafdruk)."
+msgstr ""
+"Met --send-file naar één verbonden apparaat versturen (naam of vingerafdruk)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -156,6 +157,10 @@ msgstr "In één gesprek antwoorden."
 #: src/cli/main.cpp
 msgid "List iPhone contacts, or search them by name or number."
 msgstr "Contacten van de iPhone tonen, of erin zoeken op naam of nummer."
+
+#: src/cli/main.cpp
+msgid "List contacts by first or last name."
+msgstr "Contacten sorteren op voor- of achternaam."
 
 #: src/cli/main.cpp
 msgid "Pair with an iPhone over Bluetooth."
@@ -823,12 +828,15 @@ msgstr "Kon de status van de daemon niet lezen.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "Geen verbonden apparaat met de naam {}. Voer 'tether status' uit om ze te zien.\n"
+msgstr ""
+"Geen verbonden apparaat met de naam {}. Voer 'tether status' uit om ze te "
+"zien.\n"
 
 #: src/cli/main.cpp
 #, c++-format
 msgid "More than one device is named {}; pass its fingerprint instead.\n"
-msgstr "Meer dan één apparaat heet {}; geef in plaats daarvan de vingerafdruk op.\n"
+msgstr ""
+"Meer dan één apparaat heet {}; geef in plaats daarvan de vingerafdruk op.\n"
 
 #: src/cli/main.cpp
 msgid "Version"
@@ -1063,6 +1071,18 @@ msgstr "Het gespreksgeluid blijft op de iPhone."
 #: src/cli/main.cpp
 msgid "Hanging up."
 msgstr "Wordt opgehangen."
+
+#: src/cli/main.cpp
+msgid "Expected first or last, e.g. --bt-contacts-sort last\n"
+msgstr "first of last verwacht, bijv. --bt-contacts-sort last\n"
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by last name."
+msgstr "Contacten gesorteerd op achternaam."
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by first name."
+msgstr "Contacten gesorteerd op voornaam."
 
 #: src/cli/main.cpp
 msgid "Expected on or off, e.g. --bt-calls-enable on\n"
@@ -1625,7 +1645,8 @@ msgid "Messages"
 msgstr "Berichten"
 
 #: src/core/src/bluetooth/profile_supervisor.cpp src/gtk/devices_view.cpp
-#: src/gtk/main.cpp src/tui/contacts.cpp src/tui/devices.cpp
+#: src/gtk/main.cpp src/gtk/settings_view.cpp src/tui/contacts.cpp
+#: src/tui/devices.cpp src/tui/settings.cpp
 msgid "Contacts"
 msgstr "Contacten"
 
@@ -2199,6 +2220,10 @@ msgstr "{} versturen…"
 msgid "({0} of {1})"
 msgstr "({0} van {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Daemon niet beschikbaar."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Versturen naar…"
@@ -2206,10 +2231,6 @@ msgstr "Versturen naar…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Annuleren"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Daemon niet beschikbaar."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2265,7 +2286,8 @@ msgstr "Onbekend apparaat"
 
 #: src/gtk/devices_view.cpp
 msgid "Folders can't be sent — pick files instead."
-msgstr "Mappen kunnen niet worden verstuurd — kies in plaats daarvan bestanden."
+msgstr ""
+"Mappen kunnen niet worden verstuurd — kies in plaats daarvan bestanden."
 
 #: src/gtk/devices_view.cpp
 msgid "No device is connected."
@@ -2624,7 +2646,9 @@ msgstr "Het tabblad Berichten op dit gesprek openen"
 
 #: src/gtk/main.cpp
 msgid "Send the given files, asking which device when several are connected"
-msgstr "De opgegeven bestanden versturen en vragen naar welk apparaat als er meerdere verbonden zijn"
+msgstr ""
+"De opgegeven bestanden versturen en vragen naar welk apparaat als er "
+"meerdere verbonden zijn"
 
 #: src/gtk/main.cpp
 msgid "FILE…"
@@ -2878,6 +2902,15 @@ msgid ""
 msgstr ""
 "Gepauzeerd: geen sleutel uit de sleutelbos. Ontgrendel hem, of kies "
 "Onversleuteld."
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid "Sort contacts by last name"
+msgstr "Contacten sorteren op achternaam"
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid ""
+"Contacts with only one name, and businesses, sort by the name they have."
+msgstr "Contacten met maar één naam en bedrijven worden gesorteerd op de naam die ze hebben."
 
 #: src/gtk/settings_view.cpp src/tui/settings.cpp
 msgid "Experimental"

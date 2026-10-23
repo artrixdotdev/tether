@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: tether 0.2.38\n"
+"Project-Id-Version: tether 0.2.40\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-22 19:30-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -146,6 +146,10 @@ msgstr ""
 
 #: src/cli/main.cpp
 msgid "List iPhone contacts, or search them by name or number."
+msgstr ""
+
+#: src/cli/main.cpp
+msgid "List contacts by first or last name."
 msgstr ""
 
 #: src/cli/main.cpp
@@ -966,6 +970,18 @@ msgid "Hanging up."
 msgstr ""
 
 #: src/cli/main.cpp
+msgid "Expected first or last, e.g. --bt-contacts-sort last\n"
+msgstr ""
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by last name."
+msgstr ""
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by first name."
+msgstr ""
+
+#: src/cli/main.cpp
 msgid "Expected on or off, e.g. --bt-calls-enable on\n"
 msgstr ""
 
@@ -1434,7 +1450,8 @@ msgid "Messages"
 msgstr ""
 
 #: src/core/src/bluetooth/profile_supervisor.cpp src/gtk/devices_view.cpp
-#: src/gtk/main.cpp src/tui/contacts.cpp src/tui/devices.cpp
+#: src/gtk/main.cpp src/gtk/settings_view.cpp src/tui/contacts.cpp
+#: src/tui/devices.cpp src/tui/settings.cpp
 msgid "Contacts"
 msgstr ""
 
@@ -1971,16 +1988,16 @@ msgstr ""
 msgid "({0} of {1})"
 msgstr ""
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr ""
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr ""
 
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
-msgstr ""
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
 msgstr ""
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
@@ -2593,6 +2610,15 @@ msgstr ""
 #: src/gtk/settings_view.cpp src/tui/settings.cpp
 msgid ""
 "Paused: no key from the desktop keyring. Unlock it, or choose Unencrypted."
+msgstr ""
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid "Sort contacts by last name"
+msgstr ""
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid ""
+"Contacts with only one name, and businesses, sort by the name they have."
 msgstr ""
 
 #: src/gtk/settings_view.cpp src/tui/settings.cpp

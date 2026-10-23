@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-22 19:30-0700\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Korean\n"
@@ -153,6 +153,10 @@ msgstr "한 대화에서 답장합니다."
 #: src/cli/main.cpp
 msgid "List iPhone contacts, or search them by name or number."
 msgstr "iPhone 연락처를 나열하거나 이름 또는 번호로 검색합니다."
+
+#: src/cli/main.cpp
+msgid "List contacts by first or last name."
+msgstr "연락처를 이름 또는 성으로 정렬합니다."
 
 #: src/cli/main.cpp
 msgid "Pair with an iPhone over Bluetooth."
@@ -802,7 +806,8 @@ msgstr "데몬의 상태를 읽을 수 없습니다.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "{}(이)라는 연결된 기기가 없습니다. 'tether status'를 실행하여 확인하십시오.\n"
+msgstr ""
+"{}(이)라는 연결된 기기가 없습니다. 'tether status'를 실행하여 확인하십시오.\n"
 
 #: src/cli/main.cpp
 #, c++-format
@@ -1039,6 +1044,18 @@ msgstr "통화 음성이 iPhone에 남습니다."
 #: src/cli/main.cpp
 msgid "Hanging up."
 msgstr "전화를 끊는 중입니다."
+
+#: src/cli/main.cpp
+msgid "Expected first or last, e.g. --bt-contacts-sort last\n"
+msgstr "first 또는 last가 필요합니다. 예: --bt-contacts-sort last\n"
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by last name."
+msgstr "연락처를 성으로 정렬했습니다."
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by first name."
+msgstr "연락처를 이름으로 정렬했습니다."
 
 #: src/cli/main.cpp
 msgid "Expected on or off, e.g. --bt-calls-enable on\n"
@@ -1579,7 +1596,8 @@ msgid "Messages"
 msgstr "메시지"
 
 #: src/core/src/bluetooth/profile_supervisor.cpp src/gtk/devices_view.cpp
-#: src/gtk/main.cpp src/tui/contacts.cpp src/tui/devices.cpp
+#: src/gtk/main.cpp src/gtk/settings_view.cpp src/tui/contacts.cpp
+#: src/tui/devices.cpp src/tui/settings.cpp
 msgid "Contacts"
 msgstr "연락처"
 
@@ -2146,6 +2164,10 @@ msgstr "{} 보내는 중…"
 msgid "({0} of {1})"
 msgstr "({1}개 중 {0}개)"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "데몬을 사용할 수 없습니다."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "보낼 대상…"
@@ -2153,10 +2175,6 @@ msgstr "보낼 대상…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "취소(_C)"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "데몬을 사용할 수 없습니다."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2562,7 +2580,8 @@ msgstr "이 대화에서 메시지 탭 열기"
 
 #: src/gtk/main.cpp
 msgid "Send the given files, asking which device when several are connected"
-msgstr "지정한 파일을 보내고, 여러 기기가 연결되어 있으면 어느 기기로 보낼지 묻습니다"
+msgstr ""
+"지정한 파일을 보내고, 여러 기기가 연결되어 있으면 어느 기기로 보낼지 묻습니다"
 
 #: src/gtk/main.cpp
 msgid "FILE…"
@@ -2811,6 +2830,15 @@ msgid ""
 msgstr ""
 "일시 중지됨: 데스크톱 키링에서 키를 가져올 수 없습니다. 잠금을 해제하거나 암"
 "호화 안 함을 선택하세요."
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid "Sort contacts by last name"
+msgstr "연락처를 성으로 정렬"
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid ""
+"Contacts with only one name, and businesses, sort by the name they have."
+msgstr "이름이 하나뿐인 연락처와 회사는 가진 이름으로 정렬됩니다."
 
 #: src/gtk/settings_view.cpp src/tui/settings.cpp
 msgid "Experimental"

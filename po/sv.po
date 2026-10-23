@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-22 19:30-0700\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Swedish\n"
@@ -49,7 +49,8 @@ msgstr "Skicka en fil via tether."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "Med --send-file, skicka till en ansluten enhet (namn eller fingeravtryck)."
+msgstr ""
+"Med --send-file, skicka till en ansluten enhet (namn eller fingeravtryck)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -155,6 +156,10 @@ msgstr "Svara i en konversation."
 #: src/cli/main.cpp
 msgid "List iPhone contacts, or search them by name or number."
 msgstr "Lista iPhone-kontakter, eller sök i dem på namn eller nummer."
+
+#: src/cli/main.cpp
+msgid "List contacts by first or last name."
+msgstr "Sortera kontakter efter förnamn eller efternamn."
 
 #: src/cli/main.cpp
 msgid "Pair with an iPhone over Bluetooth."
@@ -1057,6 +1062,18 @@ msgid "Hanging up."
 msgstr "Lägger på."
 
 #: src/cli/main.cpp
+msgid "Expected first or last, e.g. --bt-contacts-sort last\n"
+msgstr "Förväntade first eller last, t.ex. --bt-contacts-sort last\n"
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by last name."
+msgstr "Kontakterna sorteras efter efternamn."
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by first name."
+msgstr "Kontakterna sorteras efter förnamn."
+
+#: src/cli/main.cpp
 msgid "Expected on or off, e.g. --bt-calls-enable on\n"
 msgstr "Förväntade on eller off, t.ex. --bt-calls-enable on\n"
 
@@ -1608,7 +1625,8 @@ msgid "Messages"
 msgstr "Meddelanden"
 
 #: src/core/src/bluetooth/profile_supervisor.cpp src/gtk/devices_view.cpp
-#: src/gtk/main.cpp src/tui/contacts.cpp src/tui/devices.cpp
+#: src/gtk/main.cpp src/gtk/settings_view.cpp src/tui/contacts.cpp
+#: src/tui/devices.cpp src/tui/settings.cpp
 msgid "Contacts"
 msgstr "Kontakter"
 
@@ -2176,6 +2194,10 @@ msgstr "Skickar {}…"
 msgid "({0} of {1})"
 msgstr "({0} av {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Demonen är otillgänglig."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Skicka till…"
@@ -2183,10 +2205,6 @@ msgstr "Skicka till…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Avbryt"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Demonen är otillgänglig."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2851,6 +2869,15 @@ msgid ""
 "Paused: no key from the desktop keyring. Unlock it, or choose Unencrypted."
 msgstr ""
 "Pausad: ingen nyckel från nyckelringen. Lås upp den, eller välj Okrypterat."
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid "Sort contacts by last name"
+msgstr "Sortera kontakter efter efternamn"
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid ""
+"Contacts with only one name, and businesses, sort by the name they have."
+msgstr "Kontakter med bara ett namn, och företag, sorteras efter det namn de har."
 
 #: src/gtk/settings_view.cpp src/tui/settings.cpp
 msgid "Experimental"

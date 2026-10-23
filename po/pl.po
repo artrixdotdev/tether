@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-22 19:30-0700\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Polish\n"
@@ -49,7 +49,8 @@ msgstr "Wyślij plik przez tether."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "Z --send-file wysyła do jednego połączonego urządzenia (nazwa lub odcisk)."
+msgstr ""
+"Z --send-file wysyła do jednego połączonego urządzenia (nazwa lub odcisk)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -155,6 +156,10 @@ msgstr "Odpowiedz w jednej rozmowie."
 #: src/cli/main.cpp
 msgid "List iPhone contacts, or search them by name or number."
 msgstr "Wypisz kontakty z iPhone'a lub wyszukaj je według nazwy albo numeru."
+
+#: src/cli/main.cpp
+msgid "List contacts by first or last name."
+msgstr "Sortuj kontakty według imienia lub nazwiska."
 
 #: src/cli/main.cpp
 msgid "Pair with an iPhone over Bluetooth."
@@ -825,12 +830,15 @@ msgstr "Nie udało się odczytać stanu demona.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "Brak połączonego urządzenia o nazwie {}. Uruchom 'tether status', aby je zobaczyć.\n"
+msgstr ""
+"Brak połączonego urządzenia o nazwie {}. Uruchom 'tether status', aby je "
+"zobaczyć.\n"
 
 #: src/cli/main.cpp
 #, c++-format
 msgid "More than one device is named {}; pass its fingerprint instead.\n"
-msgstr "Więcej niż jedno urządzenie nazywa się {}; podaj zamiast tego jego odcisk.\n"
+msgstr ""
+"Więcej niż jedno urządzenie nazywa się {}; podaj zamiast tego jego odcisk.\n"
 
 #: src/cli/main.cpp
 msgid "Version"
@@ -1066,6 +1074,18 @@ msgstr "Dźwięk połączenia zostaje na iPhonie."
 #: src/cli/main.cpp
 msgid "Hanging up."
 msgstr "Rozłączanie."
+
+#: src/cli/main.cpp
+msgid "Expected first or last, e.g. --bt-contacts-sort last\n"
+msgstr "Oczekiwano first lub last, np. --bt-contacts-sort last\n"
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by last name."
+msgstr "Kontakty posortowane według nazwiska."
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by first name."
+msgstr "Kontakty posortowane według imienia."
 
 #: src/cli/main.cpp
 msgid "Expected on or off, e.g. --bt-calls-enable on\n"
@@ -1624,7 +1644,8 @@ msgid "Messages"
 msgstr "Wiadomości"
 
 #: src/core/src/bluetooth/profile_supervisor.cpp src/gtk/devices_view.cpp
-#: src/gtk/main.cpp src/tui/contacts.cpp src/tui/devices.cpp
+#: src/gtk/main.cpp src/gtk/settings_view.cpp src/tui/contacts.cpp
+#: src/tui/devices.cpp src/tui/settings.cpp
 msgid "Contacts"
 msgstr "Kontakty"
 
@@ -2195,6 +2216,10 @@ msgstr "Wysyłanie {}…"
 msgid "({0} of {1})"
 msgstr "({0} z {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Demon niedostępny."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Wyślij do…"
@@ -2202,10 +2227,6 @@ msgstr "Wyślij do…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Anuluj"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Demon niedostępny."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2877,6 +2898,15 @@ msgid ""
 msgstr ""
 "Wstrzymano: brak klucza z bazy kluczy. Odblokuj ją albo wybierz "
 "Niezaszyfrowane."
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid "Sort contacts by last name"
+msgstr "Sortuj kontakty według nazwiska"
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid ""
+"Contacts with only one name, and businesses, sort by the name they have."
+msgstr "Kontakty z jedną nazwą oraz firmy są sortowane według nazwy, którą mają."
 
 #: src/gtk/settings_view.cpp src/tui/settings.cpp
 msgid "Experimental"

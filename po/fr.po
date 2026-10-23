@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-22 19:30-0700\n"
 "PO-Revision-Date: 2026-08-22\n"
 "Last-Translator: Tether project\n"
 "Language-Team: French\n"
@@ -49,7 +49,8 @@ msgstr "Envoyer un fichier via tether."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "Avec --send-file, envoyer à un seul appareil connecté (nom ou empreinte)."
+msgstr ""
+"Avec --send-file, envoyer à un seul appareil connecté (nom ou empreinte)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -157,6 +158,10 @@ msgstr "Répondre dans une conversation."
 #: src/cli/main.cpp
 msgid "List iPhone contacts, or search them by name or number."
 msgstr "Lister les contacts de l'iPhone, ou les rechercher par nom ou numéro."
+
+#: src/cli/main.cpp
+msgid "List contacts by first or last name."
+msgstr "Trier les contacts par prénom ou par nom."
 
 #: src/cli/main.cpp
 msgid "Pair with an iPhone over Bluetooth."
@@ -830,7 +835,8 @@ msgstr "Impossible de lire l'état du démon.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "Aucun appareil connecté nommé {}. Lancez 'tether status' pour les voir.\n"
+msgstr ""
+"Aucun appareil connecté nommé {}. Lancez 'tether status' pour les voir.\n"
 
 #: src/cli/main.cpp
 #, c++-format
@@ -1071,6 +1077,18 @@ msgstr "L'audio de l'appel reste sur l'iPhone."
 #: src/cli/main.cpp
 msgid "Hanging up."
 msgstr "Raccrochage."
+
+#: src/cli/main.cpp
+msgid "Expected first or last, e.g. --bt-contacts-sort last\n"
+msgstr "first ou last attendu, par ex. --bt-contacts-sort last\n"
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by last name."
+msgstr "Contacts triés par nom."
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by first name."
+msgstr "Contacts triés par prénom."
 
 #: src/cli/main.cpp
 msgid "Expected on or off, e.g. --bt-calls-enable on\n"
@@ -1638,7 +1656,8 @@ msgid "Messages"
 msgstr "Messages"
 
 #: src/core/src/bluetooth/profile_supervisor.cpp src/gtk/devices_view.cpp
-#: src/gtk/main.cpp src/tui/contacts.cpp src/tui/devices.cpp
+#: src/gtk/main.cpp src/gtk/settings_view.cpp src/tui/contacts.cpp
+#: src/tui/devices.cpp src/tui/settings.cpp
 msgid "Contacts"
 msgstr "Contacts"
 
@@ -2215,6 +2234,10 @@ msgstr "Envoi de {}…"
 msgid "({0} of {1})"
 msgstr "({0} sur {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Démon indisponible."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Envoyer à…"
@@ -2222,10 +2245,6 @@ msgstr "Envoyer à…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Annuler"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Démon indisponible."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2283,7 +2302,8 @@ msgstr "Appareil inconnu"
 
 #: src/gtk/devices_view.cpp
 msgid "Folders can't be sent — pick files instead."
-msgstr "Les dossiers ne peuvent pas être envoyés — choisissez plutôt des fichiers."
+msgstr ""
+"Les dossiers ne peuvent pas être envoyés — choisissez plutôt des fichiers."
 
 #: src/gtk/devices_view.cpp
 msgid "No device is connected."
@@ -2644,7 +2664,9 @@ msgstr "Ouvrir l'onglet Messages sur cette conversation"
 
 #: src/gtk/main.cpp
 msgid "Send the given files, asking which device when several are connected"
-msgstr "Envoyer les fichiers indiqués, en demandant l'appareil lorsque plusieurs sont connectés"
+msgstr ""
+"Envoyer les fichiers indiqués, en demandant l'appareil lorsque plusieurs "
+"sont connectés"
 
 #: src/gtk/main.cpp
 msgid "FILE…"
@@ -2901,6 +2923,15 @@ msgid ""
 msgstr ""
 "Suspendu : aucune clé du trousseau. Déverrouillez-le, ou choisissez Non "
 "chiffré."
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid "Sort contacts by last name"
+msgstr "Trier les contacts par nom"
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid ""
+"Contacts with only one name, and businesses, sort by the name they have."
+msgstr "Les contacts avec un seul nom et les entreprises sont triés selon le nom qu’ils ont."
 
 #: src/gtk/settings_view.cpp src/tui/settings.cpp
 msgid "Experimental"

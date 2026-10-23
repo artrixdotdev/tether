@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-22 19:30-0700\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Ukrainian\n"
@@ -51,7 +51,8 @@ msgstr "Надіслати файл через tether."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "З --send-file надіслати на один підключений пристрій (назва або відбиток)."
+msgstr ""
+"З --send-file надіслати на один підключений пристрій (назва або відбиток)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -157,6 +158,10 @@ msgstr "Відповісти в одній розмові."
 #: src/cli/main.cpp
 msgid "List iPhone contacts, or search them by name or number."
 msgstr "Показати контакти iPhone або знайти їх за іменем чи номером."
+
+#: src/cli/main.cpp
+msgid "List contacts by first or last name."
+msgstr "Сортувати контакти за ім’ям або прізвищем."
 
 #: src/cli/main.cpp
 msgid "Pair with an iPhone over Bluetooth."
@@ -825,7 +830,9 @@ msgstr "Не вдалося прочитати стан демона.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "Немає підключеного пристрою з назвою {}. Запустіть 'tether status', щоб побачити їх.\n"
+msgstr ""
+"Немає підключеного пристрою з назвою {}. Запустіть 'tether status', щоб "
+"побачити їх.\n"
 
 #: src/cli/main.cpp
 #, c++-format
@@ -1066,6 +1073,18 @@ msgstr "Звук дзвінка залишається на iPhone."
 #: src/cli/main.cpp
 msgid "Hanging up."
 msgstr "Завершення виклику."
+
+#: src/cli/main.cpp
+msgid "Expected first or last, e.g. --bt-contacts-sort last\n"
+msgstr "Очікувалося first або last, наприклад --bt-contacts-sort last\n"
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by last name."
+msgstr "Контакти відсортовано за прізвищем."
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by first name."
+msgstr "Контакти відсортовано за ім’ям."
 
 #: src/cli/main.cpp
 msgid "Expected on or off, e.g. --bt-calls-enable on\n"
@@ -1621,7 +1640,8 @@ msgid "Messages"
 msgstr "Повідомлення"
 
 #: src/core/src/bluetooth/profile_supervisor.cpp src/gtk/devices_view.cpp
-#: src/gtk/main.cpp src/tui/contacts.cpp src/tui/devices.cpp
+#: src/gtk/main.cpp src/gtk/settings_view.cpp src/tui/contacts.cpp
+#: src/tui/devices.cpp src/tui/settings.cpp
 msgid "Contacts"
 msgstr "Контакти"
 
@@ -2192,6 +2212,10 @@ msgstr "Надсилання {}…"
 msgid "({0} of {1})"
 msgstr "({0} з {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Демон недоступний."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Надіслати на…"
@@ -2199,10 +2223,6 @@ msgstr "Надіслати на…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Скасувати"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Демон недоступний."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2874,6 +2894,15 @@ msgid ""
 msgstr ""
 "Призупинено: немає ключа зі сховища ключів. Розблокуйте його або виберіть "
 "«Незашифровано»."
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid "Sort contacts by last name"
+msgstr "Сортувати контакти за прізвищем"
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid ""
+"Contacts with only one name, and businesses, sort by the name they have."
+msgstr "Контакти з одним ім’ям і організації сортуються за наявним ім’ям."
 
 #: src/gtk/settings_view.cpp src/tui/settings.cpp
 msgid "Experimental"
