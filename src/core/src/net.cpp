@@ -434,6 +434,7 @@ namespace tether {
         status["lock_on_away"] = config.lock_on_away;
         status["lock_away_seconds"] = config.lock_away_seconds;
         status["yield_when_inactive"] = config.yield_when_inactive;
+        status["contacts_by_last_name"] = config.contacts_by_last_name;
         status["version"] = TETHER_VERSION;
         if (!bluetooth::g_bluez) {
             status["capability"] = nullptr;
@@ -840,9 +841,10 @@ namespace tether {
         result["command"] = "bt_contacts";
         result["query"] = query;
         nlohmann::json contacts = nlohmann::json::array();
+        const bool by_last_name = bluetooth::load_config().contacts_by_last_name;
         {
             std::lock_guard<std::mutex> lock(bluetooth::message_store_mutex());
-            for (const auto& card : bluetooth::contact_store().search(query, limit)) {
+            for (const auto& card : bluetooth::contact_store().search(query, limit, by_last_name)) {
                 nlohmann::json entry;
                 entry["name"] = card.name;
                 entry["favorite"] = card.favorite;
@@ -1485,6 +1487,11 @@ namespace tether {
                         bluetooth::save_config(config);
                         if (bluetooth::g_bt_connections)
                             bluetooth::g_bt_connections->set_yield_when_inactive(config.yield_when_inactive);
+                        broadcast_local_event(build_bt_status().dump());
+                    } else if (j.contains("command") && j["command"] == "bt_set_contacts_by_last_name") {
+                        auto config = bluetooth::load_config();
+                        config.contacts_by_last_name = j.value("enabled", false);
+                        bluetooth::save_config(config);
                         broadcast_local_event(build_bt_status().dump());
                     } else if (j.contains("command") && j["command"] == "bt_hold" && j.contains("profile")) {
                         if (bluetooth::g_bt_connections &&

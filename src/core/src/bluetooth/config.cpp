@@ -73,6 +73,7 @@ namespace tether::bluetooth {
         j["lock_command"] = config.lock_command;
         j["yield_when_inactive"] = config.yield_when_inactive;
         j["yield_idle_seconds"] = config.yield_idle_seconds;
+        j["contacts_by_last_name"] = config.contacts_by_last_name;
         return j.dump(2);
     }
 
@@ -105,6 +106,7 @@ namespace tether::bluetooth {
             // A zero or negative grace would lock on the first flap.
             config.lock_away_seconds = std::max(1, j.value("lock_away_seconds", AWAY_LOCK_GRACE_SECONDS));
             config.lock_command = j.value("lock_command", "");
+            config.contacts_by_last_name = j.value("contacts_by_last_name", false);
         } catch (const std::exception&) {
             // A corrupt file must not stop the daemon; defaults are safe.
         }

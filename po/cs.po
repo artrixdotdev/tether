@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-21 23:38-0500\n"
+"POT-Creation-Date: 2026-10-22 19:30-0700\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Czech\n"
@@ -154,6 +154,10 @@ msgstr "Odpovědět v jedné konverzaci."
 #: src/cli/main.cpp
 msgid "List iPhone contacts, or search them by name or number."
 msgstr "Vypsat kontakty z iPhonu nebo je vyhledat podle jména či čísla."
+
+#: src/cli/main.cpp
+msgid "List contacts by first or last name."
+msgstr "Řadit kontakty podle jména nebo příjmení."
 
 #: src/cli/main.cpp
 msgid "Pair with an iPhone over Bluetooth."
@@ -1062,6 +1066,18 @@ msgid "Hanging up."
 msgstr "Zavěšování."
 
 #: src/cli/main.cpp
+msgid "Expected first or last, e.g. --bt-contacts-sort last\n"
+msgstr "Očekáváno first nebo last, např. --bt-contacts-sort last\n"
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by last name."
+msgstr "Kontakty seřazeny podle příjmení."
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by first name."
+msgstr "Kontakty seřazeny podle jména."
+
+#: src/cli/main.cpp
 msgid "Expected on or off, e.g. --bt-calls-enable on\n"
 msgstr "Očekáváno on nebo off, např. --bt-calls-enable on\n"
 
@@ -1608,7 +1624,8 @@ msgid "Messages"
 msgstr "Zprávy"
 
 #: src/core/src/bluetooth/profile_supervisor.cpp src/gtk/devices_view.cpp
-#: src/gtk/main.cpp src/tui/contacts.cpp src/tui/devices.cpp
+#: src/gtk/main.cpp src/gtk/settings_view.cpp src/tui/contacts.cpp
+#: src/tui/devices.cpp src/tui/settings.cpp
 msgid "Contacts"
 msgstr "Kontakty"
 
@@ -2858,6 +2875,15 @@ msgid ""
 "Paused: no key from the desktop keyring. Unlock it, or choose Unencrypted."
 msgstr ""
 "Pozastaveno: klíčenka nenabízí klíč. Odemkněte ji, nebo zvolte Nešifrovaně."
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid "Sort contacts by last name"
+msgstr "Řadit kontakty podle příjmení"
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid ""
+"Contacts with only one name, and businesses, sort by the name they have."
+msgstr "Kontakty s jediným jménem a firmy se řadí podle jména, které mají."
 
 #: src/gtk/settings_view.cpp src/tui/settings.cpp
 msgid "Experimental"

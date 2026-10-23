@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-21 23:38-0500\n"
+"POT-Creation-Date: 2026-10-22 19:30-0700\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Turkish\n"
@@ -153,6 +153,10 @@ msgstr "Bir konuşmada yanıtla."
 #: src/cli/main.cpp
 msgid "List iPhone contacts, or search them by name or number."
 msgstr "iPhone kişilerini listeler veya ada ya da numaraya göre arar."
+
+#: src/cli/main.cpp
+msgid "List contacts by first or last name."
+msgstr "Kişileri ada veya soyada göre sırala."
 
 #: src/cli/main.cpp
 msgid "Pair with an iPhone over Bluetooth."
@@ -1054,6 +1058,18 @@ msgid "Hanging up."
 msgstr "Kapatılıyor."
 
 #: src/cli/main.cpp
+msgid "Expected first or last, e.g. --bt-contacts-sort last\n"
+msgstr "first veya last bekleniyordu, örn. --bt-contacts-sort last\n"
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by last name."
+msgstr "Kişiler soyada göre sıralandı."
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by first name."
+msgstr "Kişiler ada göre sıralandı."
+
+#: src/cli/main.cpp
 msgid "Expected on or off, e.g. --bt-calls-enable on\n"
 msgstr "on veya off bekleniyordu, örn. --bt-calls-enable on\n"
 
@@ -1604,7 +1620,8 @@ msgid "Messages"
 msgstr "Mesajlar"
 
 #: src/core/src/bluetooth/profile_supervisor.cpp src/gtk/devices_view.cpp
-#: src/gtk/main.cpp src/tui/contacts.cpp src/tui/devices.cpp
+#: src/gtk/main.cpp src/gtk/settings_view.cpp src/tui/contacts.cpp
+#: src/tui/devices.cpp src/tui/settings.cpp
 msgid "Contacts"
 msgstr "Kişiler"
 
@@ -2856,6 +2873,15 @@ msgid ""
 msgstr ""
 "Duraklatıldı: masaüstü anahtarlığından anahtar yok. Kilidini açın ya da "
 "Şifresiz'i seçin."
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid "Sort contacts by last name"
+msgstr "Kişileri soyada göre sırala"
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid ""
+"Contacts with only one name, and businesses, sort by the name they have."
+msgstr "Tek adı olan kişiler ve işletmeler sahip oldukları ada göre sıralanır."
 
 #: src/gtk/settings_view.cpp src/tui/settings.cpp
 msgid "Experimental"

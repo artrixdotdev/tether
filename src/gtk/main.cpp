@@ -382,8 +382,10 @@ namespace {
         daemon_client_start([](const nlohmann::json& event) {
             contact_completion_update(event);
             settings_handle_event(event);
-            if (event.value("command", "") == "bt_status")
+            if (event.value("command", "") == "bt_status") {
                 set_calls_tab_visible(event.value("calls_enabled", false));
+                contacts_view_set_sort(event.value("contacts_by_last_name", false));
+            }
             if (devices_view_handle_event(event))
                 return;
             if (contacts_view_handle_event(event))

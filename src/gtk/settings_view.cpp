@@ -34,6 +34,8 @@ namespace tether::ui {
             GtkWidget* cmb_retention = nullptr;
             GtkWidget* lbl_keyring = nullptr;
 
+            GtkWidget* sw_last_name = nullptr;
+
             GtkWidget* row_calls = nullptr;
             GtkWidget* sw_calls = nullptr;
 
@@ -139,6 +141,11 @@ namespace tether::ui {
             daemon_send({{"command", "set_popup_previews"}, {"enabled", gtk_switch_get_active(widget) == TRUE}});
         }
 
+        void on_last_name_toggled(GtkSwitch* widget, GParamSpec*, gpointer) {
+            daemon_send(
+                {{"command", "bt_set_contacts_by_last_name"}, {"enabled", gtk_switch_get_active(widget) == TRUE}});
+        }
+
         void on_calls_toggled(GtkSwitch* widget, GParamSpec*, gpointer) {
             daemon_send({{"command", "bt_set_calls"}, {"enabled", gtk_switch_get_active(widget) == TRUE}});
         }
@@ -200,6 +207,10 @@ namespace tether::ui {
             set_switch(g_settings.sw_lock_away,
                        reinterpret_cast<gpointer>(on_lock_away_toggled),
                        status.value("lock_on_away", false));
+
+            set_switch(g_settings.sw_last_name,
+                       reinterpret_cast<gpointer>(on_last_name_toggled),
+                       status.value("contacts_by_last_name", false));
 
             const std::string retention = status.value("retention", "encrypted");
             set_combo(g_settings.cmb_retention, reinterpret_cast<gpointer>(on_retention_changed), retention);
@@ -346,6 +357,16 @@ namespace tether::ui {
             gtk_style_context_add_class(gtk_widget_get_style_context(g_settings.lbl_keyring), "muted");
             gtk_widget_set_no_show_all(g_settings.lbl_keyring, TRUE);
             gtk_box_pack_start(GTK_BOX(column), g_settings.lbl_keyring, FALSE, FALSE, 0);
+
+            // Contacts
+            GtkWidget* contacts = add_group(column, _("Contacts"), "");
+
+            g_settings.sw_last_name = new_switch();
+            g_signal_connect(g_settings.sw_last_name, "notify::active", G_CALLBACK(on_last_name_toggled), nullptr);
+            add_row(contacts,
+                    _("Sort contacts by last name"),
+                    _("Contacts with only one name, and businesses, sort by the name they have."),
+                    g_settings.sw_last_name);
 
             // Experimental
             GtkWidget* experimental =

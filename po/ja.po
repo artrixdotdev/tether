@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-21 23:38-0500\n"
+"POT-Creation-Date: 2026-10-22 19:30-0700\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Japanese\n"
@@ -157,6 +157,10 @@ msgstr "1 つの会話で返信します。"
 #: src/cli/main.cpp
 msgid "List iPhone contacts, or search them by name or number."
 msgstr "iPhone の連絡先を一覧表示、または名前や番号で検索します。"
+
+#: src/cli/main.cpp
+msgid "List contacts by first or last name."
+msgstr "連絡先を名または姓で並べ替えます。"
 
 #: src/cli/main.cpp
 msgid "Pair with an iPhone over Bluetooth."
@@ -1059,6 +1063,18 @@ msgid "Hanging up."
 msgstr "終了しています。"
 
 #: src/cli/main.cpp
+msgid "Expected first or last, e.g. --bt-contacts-sort last\n"
+msgstr "first または last を指定してください。例: --bt-contacts-sort last\n"
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by last name."
+msgstr "連絡先を姓で並べ替えました。"
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by first name."
+msgstr "連絡先を名で並べ替えました。"
+
+#: src/cli/main.cpp
 msgid "Expected on or off, e.g. --bt-calls-enable on\n"
 msgstr "on または off を指定してください。例: --bt-calls-enable on\n"
 
@@ -1607,7 +1623,8 @@ msgid "Messages"
 msgstr "メッセージ"
 
 #: src/core/src/bluetooth/profile_supervisor.cpp src/gtk/devices_view.cpp
-#: src/gtk/main.cpp src/tui/contacts.cpp src/tui/devices.cpp
+#: src/gtk/main.cpp src/gtk/settings_view.cpp src/tui/contacts.cpp
+#: src/tui/devices.cpp src/tui/settings.cpp
 msgid "Contacts"
 msgstr "連絡先"
 
@@ -2864,6 +2881,15 @@ msgid ""
 msgstr ""
 "一時停止中: デスクトップのキーリングから鍵を取得できません。ロックを解除する"
 "か、暗号化しないを選んでください。"
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid "Sort contacts by last name"
+msgstr "連絡先を姓で並べ替える"
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid ""
+"Contacts with only one name, and businesses, sort by the name they have."
+msgstr "名前が 1 つだけの連絡先や会社は、その名前で並べ替えられます。"
 
 #: src/gtk/settings_view.cpp src/tui/settings.cpp
 msgid "Experimental"

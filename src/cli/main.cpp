@@ -209,6 +209,7 @@ static const Opt kOptions[] = {
     {"--bt-messages <thread>", N_("Show messages in one conversation.")},
     {"--bt-send <thread> <text>", N_("Reply in one conversation.")},
     {"--bt-contacts [query]", N_("List iPhone contacts, or search them by name or number.")},
+    {"--bt-contacts-sort <first|last>", N_("List contacts by first or last name.")},
     {"--bt-pair <addr> [--explicit-pair]", N_("Pair with an iPhone over Bluetooth.")},
     {"--explicit-pair",
      N_("Ask the iPhone to authenticate directly instead of connecting first. Tether falls back to this on "
@@ -1485,6 +1486,10 @@ int main(int argc, char* argv[]) {
             action = "bt_call";
             if (i + 1 < argc && argv[i + 1][0] != '-')
                 arg_val = argv[++i];
+        } else if (arg == "--bt-contacts-sort") {
+            action = "bt_contacts_sort";
+            if (i + 1 < argc && argv[i + 1][0] != '-')
+                arg_val = argv[++i];
         } else if (arg == "--bt-calls-enable") {
             action = "bt_calls_enable";
             if (i + 1 < argc && argv[i + 1][0] != '-')
@@ -1735,6 +1740,21 @@ int main(int argc, char* argv[]) {
                            : arg_val == "audio_phone" ? _("Call audio stays on the iPhone.")
                                                       : _("Hanging up.");
         return run_call_command(client, request, done);
+    } else if (action == "bt_contacts_sort") {
+        if (arg_val != "first" && arg_val != "last") {
+            debug::log(ERR, _("Expected first or last, e.g. --bt-contacts-sort last\n"));
+            return 1;
+        }
+        nlohmann::json request;
+        request["command"] = "bt_set_contacts_by_last_name";
+        request["enabled"] = arg_val == "last";
+        if (!client.send(request.dump() + "\n")) {
+            debug::log(ERR, _("Could not reach the daemon.\n"));
+            return 1;
+        }
+        fprintf(stdout,
+                "%s\n",
+                arg_val == "last" ? _("Contacts sorted by last name.") : _("Contacts sorted by first name."));
     } else if (action == "bt_calls_enable") {
         if (arg_val != "on" && arg_val != "off") {
             debug::log(ERR, _("Expected on or off, e.g. --bt-calls-enable on\n"));

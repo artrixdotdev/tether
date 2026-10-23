@@ -71,6 +71,8 @@ namespace tether::bluetooth {
         int yield_idle_seconds = YIELD_IDLE_SECONDS;
         // What performs the lock. Empty uses logind.
         std::string lock_command;
+        // Whether contacts list by last name rather than first.
+        bool contacts_by_last_name = false;
 
         bool operator==(const Config&) const = default;
     };

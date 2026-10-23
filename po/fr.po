@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-21 23:38-0500\n"
+"POT-Creation-Date: 2026-10-22 19:30-0700\n"
 "PO-Revision-Date: 2026-08-22\n"
 "Last-Translator: Tether project\n"
 "Language-Team: French\n"
@@ -158,6 +158,10 @@ msgstr "Répondre dans une conversation."
 #: src/cli/main.cpp
 msgid "List iPhone contacts, or search them by name or number."
 msgstr "Lister les contacts de l'iPhone, ou les rechercher par nom ou numéro."
+
+#: src/cli/main.cpp
+msgid "List contacts by first or last name."
+msgstr "Trier les contacts par prénom ou par nom."
 
 #: src/cli/main.cpp
 msgid "Pair with an iPhone over Bluetooth."
@@ -1075,6 +1079,18 @@ msgid "Hanging up."
 msgstr "Raccrochage."
 
 #: src/cli/main.cpp
+msgid "Expected first or last, e.g. --bt-contacts-sort last\n"
+msgstr "first ou last attendu, par ex. --bt-contacts-sort last\n"
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by last name."
+msgstr "Contacts triés par nom."
+
+#: src/cli/main.cpp
+msgid "Contacts sorted by first name."
+msgstr "Contacts triés par prénom."
+
+#: src/cli/main.cpp
 msgid "Expected on or off, e.g. --bt-calls-enable on\n"
 msgstr "on ou off attendu, par ex. --bt-calls-enable on\n"
 
@@ -1640,7 +1656,8 @@ msgid "Messages"
 msgstr "Messages"
 
 #: src/core/src/bluetooth/profile_supervisor.cpp src/gtk/devices_view.cpp
-#: src/gtk/main.cpp src/tui/contacts.cpp src/tui/devices.cpp
+#: src/gtk/main.cpp src/gtk/settings_view.cpp src/tui/contacts.cpp
+#: src/tui/devices.cpp src/tui/settings.cpp
 msgid "Contacts"
 msgstr "Contacts"
 
@@ -2914,6 +2931,15 @@ msgid ""
 msgstr ""
 "Suspendu : aucune clé du trousseau. Déverrouillez-le, ou choisissez Non "
 "chiffré."
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid "Sort contacts by last name"
+msgstr "Trier les contacts par nom"
+
+#: src/gtk/settings_view.cpp src/tui/settings.cpp
+msgid ""
+"Contacts with only one name, and businesses, sort by the name they have."
+msgstr "Les contacts avec un seul nom et les entreprises sont triés selon le nom qu’ils ont."
 
 #: src/gtk/settings_view.cpp src/tui/settings.cpp
 msgid "Experimental"

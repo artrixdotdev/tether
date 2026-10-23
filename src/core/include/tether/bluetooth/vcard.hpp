@@ -10,6 +10,9 @@ namespace tether::bluetooth {
     // Name is display data. The tel and email lists are the identity keys, and a contact routinely has several of each.
     struct VCard {
         std::string name;
+        // From N, for sorting by last name. Empty when the card has no N.
+        std::string family;
+        std::string given;
         std::vector<std::string> tels;
         std::vector<std::string> emails;
         // Call history only (X-IRMC-CALL-DATETIME): MISSED, RECEIVED or DIALED,
@@ -33,7 +36,9 @@ namespace tether::bluetooth {
     // Parameters after ';' are discarded; only the property name matters.
     bool vcard_split_property(const std::string& line, std::string& name, std::string& value);
 
-    // vCard N is structured "Family;Given;Middle;Prefix;Suffix".
+    // vCard N is structured "Family;Given;Middle;Prefix;Suffix". Takes the raw
+    // value: parts are split on unescaped ';' and then unescaped.
+    std::vector<std::string> vcard_n_parts(const std::string& value);
     std::string vcard_name_from_n(const std::string& value);
 
     // vCard 3.0 escapes \, \; \n and \\ in values.

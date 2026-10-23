@@ -437,6 +437,12 @@ take MAP from another computer that holds it. Answered with a `bt_status` broadc
 Persisted. While the session is locked or idle, MAP and PBAP are released so another
 computer can take them. Reported as `yield_when_inactive` in `bt_status`.
 
+#### `bt_set_contacts_by_last_name` (Client -> Daemon, broadcast)
+**Payload**: `{"command": "bt_set_contacts_by_last_name", "enabled": true}`
+Persisted. `bt_contacts` lists favorites first, then by the family and given name from the
+vCard `N` field; a card with no family name sorts by whichever name it has. Reported as
+`contacts_by_last_name` in `bt_status`.
+
 ### AirPods
 
 Battery does not come from BlueZ. It arrives over Apple's AAP protocol on an L2CAP
