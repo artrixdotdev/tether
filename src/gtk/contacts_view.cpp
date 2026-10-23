@@ -19,6 +19,7 @@ namespace tether::ui {
             std::string shown;
             bool visible = false;
             bool calls_available = false;
+            bool by_last_name = false;
             void (*open_thread)(const std::string&) = nullptr;
             void (*start_call)(const std::string&) = nullptr;
         };
@@ -227,6 +228,14 @@ namespace tether::ui {
             return;
         request_contacts();
         gtk_widget_grab_focus(g_contacts.search_entry);
+    }
+
+    void contacts_view_set_sort(bool by_last_name) {
+        if (by_last_name == g_contacts.by_last_name)
+            return;
+        g_contacts.by_last_name = by_last_name;
+        if (g_contacts.visible)
+            request_contacts();
     }
 
     bool contacts_view_handle_event(const nlohmann::json& event) {

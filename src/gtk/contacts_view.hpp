@@ -16,4 +16,7 @@ namespace tether::ui {
     // Contacts are only pulled while the view is on screen.
     void contacts_view_set_visible(bool visible);
 
+    // Re-pulls the list on screen when the daemon's sort order changes.
+    void contacts_view_set_sort(bool by_last_name);
+
 } // namespace tether::ui

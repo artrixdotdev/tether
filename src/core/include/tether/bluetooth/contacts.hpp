@@ -23,8 +23,8 @@ namespace tether::bluetooth {
         std::vector<std::string> addresses_for_name(const std::string& name) const;
 
         // Contacts whose name or any of their addresses contains `needle`, case- and accent-insensitively.
-        // Favorites first, then by name.
-        std::vector<VCard> search(const std::string& needle, size_t limit) const;
+        // Favorites first, then by name, or by family then given name when `by_last_name`.
+        std::vector<VCard> search(const std::string& needle, size_t limit, bool by_last_name = false) const;
 
         size_t size() const { return contacts_.size(); }
         size_t indexed() const { return by_key_.size(); }

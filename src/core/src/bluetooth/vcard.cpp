@@ -57,18 +57,27 @@ namespace tether::bluetooth {
         return !name.empty();
     }
 
-    std::string vcard_name_from_n(const std::string& value) {
-        std::vector<std::string> parts;
-        size_t start = 0;
-        while (true) {
-            size_t semi = value.find(';', start);
-            parts.push_back(value.substr(start, semi == std::string::npos ? std::string::npos : semi - start));
-            if (semi == std::string::npos)
-                break;
-            start = semi + 1;
+    std::vector<std::string> vcard_n_parts(const std::string& value) {
+        std::vector<std::string> parts(1);
+        for (size_t i = 0; i < value.size(); ++i) {
+            if (value[i] == '\\' && i + 1 < value.size()) {
+                parts.back() += value.substr(i, 2);
+                ++i;
+            } else if (value[i] == ';') {
+                parts.emplace_back();
+            } else {
+                parts.back() += value[i];
+            }
         }
-        std::string given = parts.size() > 1 ? trim(parts[1]) : std::string{};
-        std::string family = parts.empty() ? std::string{} : trim(parts[0]);
+        for (auto& part : parts)
+            part = trim(vcard_unescape(part));
+        return parts;
+    }
+
+    std::string vcard_name_from_n(const std::string& value) {
+        const auto parts = vcard_n_parts(value);
+        const std::string& family = parts[0];
+        const std::string given = parts.size() > 1 ? parts[1] : std::string{};
         if (!given.empty() && !family.empty())
             return given + " " + family;
         return given.empty() ? family : given;
@@ -156,9 +165,12 @@ namespace tether::bluetooth {
                 current.emails.push_back(vcard_unescape(value));
             else if (name == "FN")
                 current.name = vcard_unescape(value);
-            else if (name == "N")
-                structured_name = vcard_name_from_n(vcard_unescape(value));
-            else if (name == "X-IRMC-CALL-DATETIME") {
+            else if (name == "N") {
+                const auto parts = vcard_n_parts(value);
+                current.family = parts[0];
+                current.given = parts.size() > 1 ? parts[1] : std::string{};
+                structured_name = vcard_name_from_n(value);
+            } else if (name == "X-IRMC-CALL-DATETIME") {
                 // The call type is the parameter: ";MISSED:" (iOS) or ";TYPE=MISSED:".
                 const std::string head = token.substr(0, token.find(':'));
                 const size_t semi = head.find(';');

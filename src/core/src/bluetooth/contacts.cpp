@@ -12,6 +12,7 @@
 #include <fstream>
 #include <glib.h>
 #include <set>
+#include <tuple>
 #include <unistd.h>
 
 namespace tether::bluetooth {
@@ -100,7 +101,7 @@ namespace tether::bluetooth {
         return out;
     }
 
-    std::vector<VCard> ContactStore::search(const std::string& needle, size_t limit) const {
+    std::vector<VCard> ContactStore::search(const std::string& needle, size_t limit, bool by_last_name) const {
         const std::string wanted = fold(needle);
         std::vector<VCard> out;
         for (const auto& card : contacts_) {
@@ -117,10 +118,20 @@ namespace tether::bluetooth {
                 out.push_back(card);
         }
         // Sorted before the limit applies, so a favorite is never cut off.
-        std::sort(out.begin(), out.end(), [](const VCard& a, const VCard& b) {
+        // A card without a family name (a single name, a business, FN only)
+        // sorts on whichever name it has.
+        auto key = [by_last_name](const VCard& card) {
+            if (!by_last_name)
+                return std::tuple{fold(card.name), std::string{}, std::string{}};
+            const std::string& primary = !card.family.empty()  ? card.family
+                                         : !card.given.empty() ? card.given
+                                                               : card.name;
+            return std::tuple{fold(primary), fold(card.given), fold(card.name)};
+        };
+        std::sort(out.begin(), out.end(), [&key](const VCard& a, const VCard& b) {
             if (a.favorite != b.favorite)
                 return a.favorite;
-            return fold(a.name) < fold(b.name);
+            return key(a) < key(b);
         });
         if (out.size() > limit)
             out.resize(limit);
@@ -164,6 +175,8 @@ namespace tether::bluetooth {
         for (const auto& card : store.contacts()) {
             nlohmann::json c;
             c["name"] = card.name;
+            c["family"] = card.family;
+            c["given"] = card.given;
             c["tels"] = card.tels;
             c["emails"] = card.emails;
             c["favorite"] = card.favorite;
@@ -184,6 +197,8 @@ namespace tether::bluetooth {
             for (const auto& c : j.value("contacts", nlohmann::json::array())) {
                 VCard card;
                 card.name = c.value("name", "");
+                card.family = c.value("family", "");
+                card.given = c.value("given", "");
                 card.tels = c.value("tels", std::vector<std::string>{});
                 card.emails = c.value("emails", std::vector<std::string>{});
                 card.favorite = c.value("favorite", false);

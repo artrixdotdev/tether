@@ -460,3 +460,50 @@ TEST(ContactStore, FavoriteSurvivesJsonRoundTrip) {
     ScopedStore scope("favorite-roundtrip");
     ASSERT_TRUE(deserialize_contacts(serialize_contacts(store)).contacts().at(0).favorite);
 }
+
+TEST(VCard, KeepsStructuredNameParts) {
+    auto cards = parse_vcards("BEGIN:VCARD\nN:van Beethoven;Ludwig;;;\nFN:Ludwig van Beethoven\nEND:VCARD\n");
+
+    ASSERT_EQ(cards.size(), 1u);
+    EXPECT_EQ(cards[0].family, "van Beethoven");
+    EXPECT_EQ(cards[0].given, "Ludwig");
+}
+
+// The ';' is the part separator, so an escaped one belongs to its part.
+TEST(VCard, SplitsStructuredNameBeforeUnescaping) {
+    auto cards = parse_vcards("BEGIN:VCARD\nN:Smith\\;Jones;Ann\\, Marie;;;\nEND:VCARD\n");
+
+    ASSERT_EQ(cards.size(), 1u);
+    EXPECT_EQ(cards[0].family, "Smith;Jones");
+    EXPECT_EQ(cards[0].given, "Ann, Marie");
+    EXPECT_EQ(cards[0].name, "Ann, Marie Smith;Jones");
+}
+
+TEST(ContactSearch, SortsByLastNameFallingBackToWhicheverNameACardHas) {
+    ContactStore store;
+    store.set(parse_vcards("BEGIN:VCARD\nN:Turing;Alan;;;\nFN:Alan Turing\nEND:VCARD\n"
+                           "BEGIN:VCARD\nN:;Cher;;;\nFN:Cher\nEND:VCARD\n"
+                           "BEGIN:VCARD\nN:;;;;\nFN:Acme Corp\nEND:VCARD\n"
+                           "BEGIN:VCARD\nN:Smith-Jones;Mary Ann;;;\nFN:Mary Ann Smith-Jones\nEND:VCARD\n"
+                           "BEGIN:VCARD\nFN:Bob\nEND:VCARD\n"
+                           "BEGIN:VCARD\nN:Smith;Jane;;;\nFN:Jane Smith\nEND:VCARD\n"
+                           "BEGIN:VCARD\nN:Smith;Adam;;;\nFN:Adam Smith\nEND:VCARD\n"));
+
+    EXPECT_EQ(names_of(store.search("", 10, true)),
+              (std::vector<std::string>{
+                  "Acme Corp", "Bob", "Cher", "Adam Smith", "Jane Smith", "Mary Ann Smith-Jones", "Alan Turing"}));
+    EXPECT_EQ(names_of(store.search("", 10)),
+              (std::vector<std::string>{
+                  "Acme Corp", "Adam Smith", "Alan Turing", "Bob", "Cher", "Jane Smith", "Mary Ann Smith-Jones"}));
+}
+
+TEST(ContactStore, StructuredNameSurvivesJsonRoundTrip) {
+    ContactStore store;
+    store.set(parse_vcards("BEGIN:VCARD\nN:Lovelace;Ada;;;\nTEL:+15551234567\nEND:VCARD\n"));
+
+    ScopedStore scope("structured-roundtrip");
+    const auto restored = deserialize_contacts(serialize_contacts(store)).contacts();
+    ASSERT_EQ(restored.size(), 1u);
+    EXPECT_EQ(restored[0].family, "Lovelace");
+    EXPECT_EQ(restored[0].given, "Ada");
+}
