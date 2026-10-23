@@ -1665,6 +1665,10 @@ msgid "Reject"
 msgstr ""
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr ""
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr ""
 
@@ -1688,6 +1692,10 @@ msgstr ""
 
 #: src/daemon/notification.cpp
 msgid "Reply"
+msgstr ""
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
 msgstr ""
 
 #: src/daemon/notification.cpp

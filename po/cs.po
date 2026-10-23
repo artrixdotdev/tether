@@ -1858,6 +1858,10 @@ msgid "Reject"
 msgstr "Odmítnout"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Odpověď nebyla odeslána"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Tento počítač nelze najít"
 
@@ -1884,6 +1888,10 @@ msgstr "Otevřít složku"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Odpovědět"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Odpovědět…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"

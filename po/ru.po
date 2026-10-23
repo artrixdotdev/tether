@@ -1878,6 +1878,10 @@ msgid "Reject"
 msgstr "Отклонить"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Ответ не отправлен"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Этот компьютер не удаётся обнаружить"
 
@@ -1904,6 +1908,10 @@ msgstr "Открыть папку"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Ответить"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Ответить…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"

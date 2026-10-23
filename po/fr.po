@@ -1894,6 +1894,10 @@ msgid "Reject"
 msgstr "Refuser"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Réponse non envoyée"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Cet ordinateur est introuvable"
 
@@ -1921,6 +1925,10 @@ msgstr "Ouvrir le dossier"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Répondre"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Répondre…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"

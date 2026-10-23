@@ -1882,6 +1882,10 @@ msgid "Reject"
 msgstr "Recusar"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Resposta não enviada"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Este computador não pode ser descoberto"
 
@@ -1908,6 +1912,10 @@ msgstr "Abrir pasta"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Responder"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Responder…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"

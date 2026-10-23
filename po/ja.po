@@ -1860,6 +1860,10 @@ msgid "Reject"
 msgstr "拒否"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "返信を送信できませんでした"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "このパソコンを検出できません"
 
@@ -1887,6 +1891,10 @@ msgstr "フォルダを開く"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "返信"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "返信…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"

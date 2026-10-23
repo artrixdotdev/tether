@@ -1888,6 +1888,10 @@ msgid "Reject"
 msgstr "Rechazar"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Respuesta no enviada"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "No se puede detectar este equipo"
 
@@ -1914,6 +1918,10 @@ msgstr "Abrir carpeta"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Responder"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Responder…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"

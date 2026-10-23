@@ -1778,6 +1778,10 @@ msgid "Reject"
 msgstr "拒绝"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "回复未发送"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "无法发现此电脑"
 
@@ -1804,6 +1808,10 @@ msgstr "打开文件夹"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "回复"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "回复…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"

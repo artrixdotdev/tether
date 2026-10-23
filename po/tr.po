@@ -1853,6 +1853,10 @@ msgid "Reject"
 msgstr "Reddet"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Yanıt gönderilmedi"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Bu bilgisayar keşfedilemiyor"
 
@@ -1879,6 +1883,10 @@ msgstr "Klasörü aç"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Yanıtla"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Yanıtla…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"

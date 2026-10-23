@@ -1881,6 +1881,10 @@ msgid "Reject"
 msgstr "Weigeren"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Antwoord niet verstuurd"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Deze pc kan niet worden gevonden"
 
@@ -1907,6 +1911,10 @@ msgstr "Map openen"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Antwoorden"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Antwoorden…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
