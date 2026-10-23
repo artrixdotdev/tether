@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-21 23:38-0500\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Brazilian Portuguese\n"
@@ -50,7 +50,9 @@ msgstr "Enviar um arquivo pelo tether."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "Com --send-file, enviar para um dispositivo conectado (nome ou impressão digital)."
+msgstr ""
+"Com --send-file, enviar para um dispositivo conectado (nome ou impressão "
+"digital)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -820,12 +822,15 @@ msgstr "Não foi possível ler o estado do daemon.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "Nenhum dispositivo conectado chamado {}. Execute 'tether status' para vê-los.\n"
+msgstr ""
+"Nenhum dispositivo conectado chamado {}. Execute 'tether status' para vê-"
+"los.\n"
 
 #: src/cli/main.cpp
 #, c++-format
 msgid "More than one device is named {}; pass its fingerprint instead.\n"
-msgstr "Mais de um dispositivo se chama {}; informe a impressão digital dele.\n"
+msgstr ""
+"Mais de um dispositivo se chama {}; informe a impressão digital dele.\n"
 
 #: src/cli/main.cpp
 msgid "Version"
@@ -1860,6 +1865,10 @@ msgid "Reject"
 msgstr "Recusar"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Resposta não enviada"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Este computador não pode ser descoberto"
 
@@ -1886,6 +1895,10 @@ msgstr "Abrir pasta"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Responder"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Responder…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
@@ -2198,6 +2211,10 @@ msgstr "Enviando {}…"
 msgid "({0} of {1})"
 msgstr "({0} de {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Daemon indisponível."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Enviar para…"
@@ -2205,10 +2222,6 @@ msgstr "Enviar para…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Cancelar"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Daemon indisponível."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2622,7 +2635,9 @@ msgstr "Abrir a aba de mensagens nesta conversa"
 
 #: src/gtk/main.cpp
 msgid "Send the given files, asking which device when several are connected"
-msgstr "Enviar os arquivos indicados, perguntando para qual dispositivo quando houver vários conectados"
+msgstr ""
+"Enviar os arquivos indicados, perguntando para qual dispositivo quando "
+"houver vários conectados"
 
 #: src/gtk/main.cpp
 msgid "FILE…"

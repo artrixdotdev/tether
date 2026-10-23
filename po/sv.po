@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-21 23:38-0500\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Swedish\n"
@@ -49,7 +49,8 @@ msgstr "Skicka en fil via tether."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "Med --send-file, skicka till en ansluten enhet (namn eller fingeravtryck)."
+msgstr ""
+"Med --send-file, skicka till en ansluten enhet (namn eller fingeravtryck)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -1840,6 +1841,10 @@ msgid "Reject"
 msgstr "Avvisa"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Svaret skickades inte"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Den här datorn kan inte hittas"
 
@@ -1866,6 +1871,10 @@ msgstr "Öppna mapp"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Svara"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Svara…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
@@ -2176,6 +2185,10 @@ msgstr "Skickar {}…"
 msgid "({0} of {1})"
 msgstr "({0} av {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Demonen är otillgänglig."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Skicka till…"
@@ -2183,10 +2196,6 @@ msgstr "Skicka till…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Avbryt"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Demonen är otillgänglig."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"

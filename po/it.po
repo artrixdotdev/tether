@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-21 23:38-0500\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Italian\n"
@@ -49,7 +49,8 @@ msgstr "Invia un file tramite tether."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "Con --send-file, invia a un solo dispositivo connesso (nome o impronta)."
+msgstr ""
+"Con --send-file, invia a un solo dispositivo connesso (nome o impronta)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -825,7 +826,8 @@ msgstr "Impossibile leggere lo stato del demone.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "Nessun dispositivo connesso di nome {}. Esegui 'tether status' per vederli.\n"
+msgstr ""
+"Nessun dispositivo connesso di nome {}. Esegui 'tether status' per vederli.\n"
 
 #: src/cli/main.cpp
 #, c++-format
@@ -1866,6 +1868,10 @@ msgid "Reject"
 msgstr "Rifiuta"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Risposta non inviata"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Questo computer non è rilevabile"
 
@@ -1892,6 +1898,10 @@ msgstr "Apri cartella"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Rispondi"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Rispondi…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
@@ -2206,6 +2216,10 @@ msgstr "Invio di {}…"
 msgid "({0} of {1})"
 msgstr "({0} di {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Daemon non disponibile."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Invia a…"
@@ -2213,10 +2227,6 @@ msgstr "Invia a…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "A_nnulla"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Daemon non disponibile."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2633,7 +2643,9 @@ msgstr "Apri la scheda messaggi su questa conversazione"
 
 #: src/gtk/main.cpp
 msgid "Send the given files, asking which device when several are connected"
-msgstr "Invia i file indicati, chiedendo a quale dispositivo se ne sono connessi diversi"
+msgstr ""
+"Invia i file indicati, chiedendo a quale dispositivo se ne sono connessi "
+"diversi"
 
 #: src/gtk/main.cpp
 msgid "FILE…"

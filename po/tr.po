@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-21 23:38-0500\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Turkish\n"
@@ -1836,6 +1836,10 @@ msgid "Reject"
 msgstr "Reddet"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Yanıt gönderilmedi"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Bu bilgisayar keşfedilemiyor"
 
@@ -1862,6 +1866,10 @@ msgstr "Klasörü aç"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Yanıtla"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Yanıtla…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
@@ -2170,6 +2178,10 @@ msgstr "{} gönderiliyor…"
 msgid "({0} of {1})"
 msgstr "({1} içinden {0})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Arka plan hizmeti kullanılamıyor."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Şuraya gönder…"
@@ -2177,10 +2189,6 @@ msgstr "Şuraya gönder…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Vazgeç"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Arka plan hizmeti kullanılamıyor."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2591,7 +2599,9 @@ msgstr "Mesajlar sekmesini bu konuşmada aç"
 
 #: src/gtk/main.cpp
 msgid "Send the given files, asking which device when several are connected"
-msgstr "Verilen dosyaları gönder, birden fazla aygıt bağlıysa hangisine gönderileceğini sor"
+msgstr ""
+"Verilen dosyaları gönder, birden fazla aygıt bağlıysa hangisine "
+"gönderileceğini sor"
 
 #: src/gtk/main.cpp
 msgid "FILE…"

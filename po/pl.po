@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-21 23:38-0500\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Polish\n"
@@ -49,7 +49,8 @@ msgstr "Wyślij plik przez tether."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "Z --send-file wysyła do jednego połączonego urządzenia (nazwa lub odcisk)."
+msgstr ""
+"Z --send-file wysyła do jednego połączonego urządzenia (nazwa lub odcisk)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -825,12 +826,15 @@ msgstr "Nie udało się odczytać stanu demona.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "Brak połączonego urządzenia o nazwie {}. Uruchom 'tether status', aby je zobaczyć.\n"
+msgstr ""
+"Brak połączonego urządzenia o nazwie {}. Uruchom 'tether status', aby je "
+"zobaczyć.\n"
 
 #: src/cli/main.cpp
 #, c++-format
 msgid "More than one device is named {}; pass its fingerprint instead.\n"
-msgstr "Więcej niż jedno urządzenie nazywa się {}; podaj zamiast tego jego odcisk.\n"
+msgstr ""
+"Więcej niż jedno urządzenie nazywa się {}; podaj zamiast tego jego odcisk.\n"
 
 #: src/cli/main.cpp
 msgid "Version"
@@ -1859,6 +1863,10 @@ msgid "Reject"
 msgstr "Odrzuć"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Nie wysłano odpowiedzi"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Nie można wykryć tego komputera"
 
@@ -1885,6 +1893,10 @@ msgstr "Otwórz folder"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Odpowiedz"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Odpowiedz…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
@@ -2195,6 +2207,10 @@ msgstr "Wysyłanie {}…"
 msgid "({0} of {1})"
 msgstr "({0} z {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Demon niedostępny."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Wyślij do…"
@@ -2202,10 +2218,6 @@ msgstr "Wyślij do…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Anuluj"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Demon niedostępny."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"

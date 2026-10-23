@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-21 23:38-0500\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Simplified Chinese\n"
@@ -1761,6 +1761,10 @@ msgid "Reject"
 msgstr "拒绝"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "回复未发送"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "无法发现此电脑"
 
@@ -1787,6 +1791,10 @@ msgstr "打开文件夹"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "回复"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "回复…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
@@ -2093,6 +2101,10 @@ msgstr "正在发送 {}……"
 msgid "({0} of {1})"
 msgstr "（第 {0} 个，共 {1} 个）"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "守护进程不可用。"
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "发送到…"
@@ -2100,10 +2112,6 @@ msgstr "发送到…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "取消(_C)"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "守护进程不可用。"
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"

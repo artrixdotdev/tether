@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-21 23:38-0500\n"
 "PO-Revision-Date: 2026-08-22\n"
 "Last-Translator: Tether project\n"
 "Language-Team: French\n"
@@ -49,7 +49,8 @@ msgstr "Envoyer un fichier via tether."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "Avec --send-file, envoyer à un seul appareil connecté (nom ou empreinte)."
+msgstr ""
+"Avec --send-file, envoyer à un seul appareil connecté (nom ou empreinte)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -830,7 +831,8 @@ msgstr "Impossible de lire l'état du démon.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "Aucun appareil connecté nommé {}. Lancez 'tether status' pour les voir.\n"
+msgstr ""
+"Aucun appareil connecté nommé {}. Lancez 'tether status' pour les voir.\n"
 
 #: src/cli/main.cpp
 #, c++-format
@@ -1875,6 +1877,10 @@ msgid "Reject"
 msgstr "Refuser"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Réponse non envoyée"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Cet ordinateur est introuvable"
 
@@ -1902,6 +1908,10 @@ msgstr "Ouvrir le dossier"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Répondre"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Répondre…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
@@ -2215,6 +2225,10 @@ msgstr "Envoi de {}…"
 msgid "({0} of {1})"
 msgstr "({0} sur {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Démon indisponible."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Envoyer à…"
@@ -2222,10 +2236,6 @@ msgstr "Envoyer à…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Annuler"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Démon indisponible."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2283,7 +2293,8 @@ msgstr "Appareil inconnu"
 
 #: src/gtk/devices_view.cpp
 msgid "Folders can't be sent — pick files instead."
-msgstr "Les dossiers ne peuvent pas être envoyés — choisissez plutôt des fichiers."
+msgstr ""
+"Les dossiers ne peuvent pas être envoyés — choisissez plutôt des fichiers."
 
 #: src/gtk/devices_view.cpp
 msgid "No device is connected."
@@ -2644,7 +2655,9 @@ msgstr "Ouvrir l'onglet Messages sur cette conversation"
 
 #: src/gtk/main.cpp
 msgid "Send the given files, asking which device when several are connected"
-msgstr "Envoyer les fichiers indiqués, en demandant l'appareil lorsque plusieurs sont connectés"
+msgstr ""
+"Envoyer les fichiers indiqués, en demandant l'appareil lorsque plusieurs "
+"sont connectés"
 
 #: src/gtk/main.cpp
 msgid "FILE…"

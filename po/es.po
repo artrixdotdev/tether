@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-21 23:38-0500\n"
 "PO-Revision-Date: 2026-08-22\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Spanish\n"
@@ -825,7 +825,9 @@ msgstr "No se pudo leer el estado del demonio.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "No hay ningún dispositivo conectado llamado {}. Ejecute 'tether status' para verlos.\n"
+msgstr ""
+"No hay ningún dispositivo conectado llamado {}. Ejecute 'tether status' para "
+"verlos.\n"
 
 #: src/cli/main.cpp
 #, c++-format
@@ -1869,6 +1871,10 @@ msgid "Reject"
 msgstr "Rechazar"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Respuesta no enviada"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "No se puede detectar este equipo"
 
@@ -1895,6 +1901,10 @@ msgstr "Abrir carpeta"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Responder"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Responder…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
@@ -2211,6 +2221,10 @@ msgstr "Enviando {}…"
 msgid "({0} of {1})"
 msgstr "({0} de {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Daemon no disponible."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Enviar a…"
@@ -2218,10 +2232,6 @@ msgstr "Enviar a…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Cancelar"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Daemon no disponible."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2638,7 +2648,9 @@ msgstr "Abrir la pestaña de mensajes en esta conversación"
 
 #: src/gtk/main.cpp
 msgid "Send the given files, asking which device when several are connected"
-msgstr "Enviar los archivos indicados y preguntar a qué dispositivo cuando haya varios conectados"
+msgstr ""
+"Enviar los archivos indicados y preguntar a qué dispositivo cuando haya "
+"varios conectados"
 
 #: src/gtk/main.cpp
 msgid "FILE…"

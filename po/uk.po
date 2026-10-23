@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-21 23:38-0500\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Ukrainian\n"
@@ -51,7 +51,8 @@ msgstr "Надіслати файл через tether."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "З --send-file надіслати на один підключений пристрій (назва або відбиток)."
+msgstr ""
+"З --send-file надіслати на один підключений пристрій (назва або відбиток)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -825,7 +826,9 @@ msgstr "Не вдалося прочитати стан демона.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "Немає підключеного пристрою з назвою {}. Запустіть 'tether status', щоб побачити їх.\n"
+msgstr ""
+"Немає підключеного пристрою з назвою {}. Запустіть 'tether status', щоб "
+"побачити їх.\n"
 
 #: src/cli/main.cpp
 #, c++-format
@@ -1854,6 +1857,10 @@ msgid "Reject"
 msgstr "Відхилити"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Відповідь не надіслано"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Цей комп'ютер не вдається виявити"
 
@@ -1880,6 +1887,10 @@ msgstr "Відкрити теку"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Відповісти"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Відповісти…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
@@ -2192,6 +2203,10 @@ msgstr "Надсилання {}…"
 msgid "({0} of {1})"
 msgstr "({0} з {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Демон недоступний."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Надіслати на…"
@@ -2199,10 +2214,6 @@ msgstr "Надіслати на…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Скасувати"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Демон недоступний."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"

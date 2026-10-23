@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-21 23:38-0500\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Czech\n"
@@ -817,7 +817,9 @@ msgstr "Nepodařilo se přečíst stav démona.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "Žádné připojené zařízení s názvem {}. Spusťte 'tether status' a zobrazte je.\n"
+msgstr ""
+"Žádné připojené zařízení s názvem {}. Spusťte 'tether status' a zobrazte "
+"je.\n"
 
 #: src/cli/main.cpp
 #, c++-format
@@ -1839,6 +1841,10 @@ msgid "Reject"
 msgstr "Odmítnout"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Odpověď nebyla odeslána"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Tento počítač nelze najít"
 
@@ -1865,6 +1871,10 @@ msgstr "Otevřít složku"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Odpovědět"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Odpovědět…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
@@ -2174,6 +2184,10 @@ msgstr "Odesílání {}…"
 msgid "({0} of {1})"
 msgstr "({0} z {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Démon není dostupný."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Odeslat do…"
@@ -2181,10 +2195,6 @@ msgstr "Odeslat do…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Zrušit"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Démon není dostupný."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2597,7 +2607,8 @@ msgstr "Otevřít kartu zpráv na této konverzaci"
 
 #: src/gtk/main.cpp
 msgid "Send the given files, asking which device when several are connected"
-msgstr "Odeslat zadané soubory a při více připojených zařízeních se zeptat, kam"
+msgstr ""
+"Odeslat zadané soubory a při více připojených zařízeních se zeptat, kam"
 
 #: src/gtk/main.cpp
 msgid "FILE…"

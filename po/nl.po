@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tether\n"
 "Report-Msgid-Bugs-To: zack@bartel.com\n"
-"POT-Creation-Date: 2026-10-18 15:38-0700\n"
+"POT-Creation-Date: 2026-10-21 23:38-0500\n"
 "PO-Revision-Date: 2026-08-23\n"
 "Last-Translator: Tether project\n"
 "Language-Team: Dutch\n"
@@ -49,7 +49,8 @@ msgstr "Een bestand via tether versturen."
 
 #: src/cli/main.cpp
 msgid "With --send-file, send to one connected device (name or fingerprint)."
-msgstr "Met --send-file naar één verbonden apparaat versturen (naam of vingerafdruk)."
+msgstr ""
+"Met --send-file naar één verbonden apparaat versturen (naam of vingerafdruk)."
 
 #: src/cli/main.cpp
 msgid "Start the browser Native Messaging Host proxy loop."
@@ -823,12 +824,15 @@ msgstr "Kon de status van de daemon niet lezen.\n"
 #: src/cli/main.cpp
 #, c++-format
 msgid "No connected device named {}. Run 'tether status' to see them.\n"
-msgstr "Geen verbonden apparaat met de naam {}. Voer 'tether status' uit om ze te zien.\n"
+msgstr ""
+"Geen verbonden apparaat met de naam {}. Voer 'tether status' uit om ze te "
+"zien.\n"
 
 #: src/cli/main.cpp
 #, c++-format
 msgid "More than one device is named {}; pass its fingerprint instead.\n"
-msgstr "Meer dan één apparaat heet {}; geef in plaats daarvan de vingerafdruk op.\n"
+msgstr ""
+"Meer dan één apparaat heet {}; geef in plaats daarvan de vingerafdruk op.\n"
 
 #: src/cli/main.cpp
 msgid "Version"
@@ -1860,6 +1864,10 @@ msgid "Reject"
 msgstr "Weigeren"
 
 #: src/daemon/main.cpp
+msgid "Reply not sent"
+msgstr "Antwoord niet verstuurd"
+
+#: src/daemon/main.cpp
 msgid "This PC can't be discovered"
 msgstr "Deze pc kan niet worden gevonden"
 
@@ -1886,6 +1894,10 @@ msgstr "Map openen"
 #: src/daemon/notification.cpp
 msgid "Reply"
 msgstr "Antwoorden"
+
+#: src/daemon/notification.cpp
+msgid "Reply…"
+msgstr "Antwoorden…"
 
 #: src/daemon/notification.cpp
 msgid "Copy Code"
@@ -2199,6 +2211,10 @@ msgstr "{} versturen…"
 msgid "({0} of {1})"
 msgstr "({0} van {1})"
 
+#: src/gtk/devices_view.cpp src/tui/devices.cpp
+msgid "Daemon unavailable."
+msgstr "Daemon niet beschikbaar."
+
 #: src/gtk/devices_view.cpp
 msgid "Send to…"
 msgstr "Versturen naar…"
@@ -2206,10 +2222,6 @@ msgstr "Versturen naar…"
 #: src/gtk/devices_view.cpp
 msgid "_Cancel"
 msgstr "_Annuleren"
-
-#: src/gtk/devices_view.cpp src/tui/devices.cpp
-msgid "Daemon unavailable."
-msgstr "Daemon niet beschikbaar."
 
 #: src/gtk/devices_view.cpp src/tui/devices.cpp
 msgid "Send File"
@@ -2265,7 +2277,8 @@ msgstr "Onbekend apparaat"
 
 #: src/gtk/devices_view.cpp
 msgid "Folders can't be sent — pick files instead."
-msgstr "Mappen kunnen niet worden verstuurd — kies in plaats daarvan bestanden."
+msgstr ""
+"Mappen kunnen niet worden verstuurd — kies in plaats daarvan bestanden."
 
 #: src/gtk/devices_view.cpp
 msgid "No device is connected."
@@ -2624,7 +2637,9 @@ msgstr "Het tabblad Berichten op dit gesprek openen"
 
 #: src/gtk/main.cpp
 msgid "Send the given files, asking which device when several are connected"
-msgstr "De opgegeven bestanden versturen en vragen naar welk apparaat als er meerdere verbonden zijn"
+msgstr ""
+"De opgegeven bestanden versturen en vragen naar welk apparaat als er "
+"meerdere verbonden zijn"
 
 #: src/gtk/main.cpp
 msgid "FILE…"
